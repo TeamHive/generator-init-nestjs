@@ -1,3 +1,4 @@
+import * as download from 'download-git-repo';
 import { kebabCase } from 'lodash';
 import * as Generator from 'yeoman-generator';
 import yosay = require('yosay');
@@ -11,6 +12,15 @@ module.exports = class extends Generator {
 
     initializing() {
         this.log(yosay('Start up a new NestJS Project!'));
+
+        download('teamhive/nestjs-seed', `${__dirname}/templates`, err => {
+            if (err) {
+                // tslint:disable-next-line:no-console
+                console.error('There was an issue downloading the latest template files. (teamhive/nestjs-seed)', err);
+                process.exit();
+            }
+            return;
+        });
     }
 
     async prompting() {

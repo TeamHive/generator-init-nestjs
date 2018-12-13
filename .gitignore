@@ -2,5 +2,4 @@ node_modules
 *.js
 *.d.ts
 *.tgz
-
-!generators/app/templates/**
+generators/app/templates
