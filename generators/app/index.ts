@@ -1,4 +1,5 @@
 import * as download from 'download-git-repo';
+import * as fs from 'fs';
 import { kebabCase } from 'lodash';
 import * as Generator from 'yeoman-generator';
 import yosay = require('yosay');
@@ -19,6 +20,10 @@ module.exports = class extends Generator {
                 console.error('There was an issue downloading the latest template files. (teamhive/nestjs-seed)', err);
                 process.exit();
             }
+
+            fs.copyFileSync(`${__dirname}/_package.json`, `${__dirname}/templates/package.json`);
+            fs.copyFileSync(`${__dirname}/_README.md`, `${__dirname}/templates/README.md`);
+
             return;
         });
     }
