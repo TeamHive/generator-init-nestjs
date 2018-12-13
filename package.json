@@ -1,6 +1,6 @@
 {
     "name": "@teamhive/generator-init-nestjs",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Yeoman generator for NestJs based on our standards",
     "homepage": "https://github.com/TeamHive/generator-init-nestjs",
     "private": false,
