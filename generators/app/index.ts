@@ -1,4 +1,3 @@
-import * as rename from 'gulp-rename';
 import { kebabCase } from 'lodash';
 import * as Generator from 'yeoman-generator';
 import yosay = require('yosay');
@@ -40,9 +39,6 @@ module.exports = class extends Generator {
     }
 
     writing() {
-        this.registerTransformStream(rename(path => {
-            path.basename = path.basename.replace(/^_/, '');
-        }));
         this.fs.copyTpl(
             this.templatePath('**'),
             this.destinationPath(),
