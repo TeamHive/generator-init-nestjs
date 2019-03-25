@@ -1,5 +1,5 @@
 # generator-init-nestjs
-An opinionated [Yeoman](http://yeoman.io) generator for NestJs
+An opinionated [Yeoman](http://yeoman.io) generator for NestJS
 
 ## Installation
 ```bash
